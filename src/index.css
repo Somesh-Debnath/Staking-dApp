@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toast {
+  z-index: 9999;
+}
+
+@layer components{
+  
+.radial{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(23,56,199,1) 26%, rgba(235, 46, 46, 0.936) 75%);}
+
+  .button-section {
+    display: flex;
+    width: 500px;
+    justify-content: flex-start;
+    margin-top: 18px;
+  }
+
+  .button-section button {
+    width: 100px ;
+    padding: 10px 18px 10px 18px;
+    font-size: 13px;
+    cursor: pointer;
+    color: black;
+    border-radius: 0.5rem; 
+    font-weight: 500; 
+    text-align: center; 
+    color: #E5E7EB; 
+    text-transform: uppercase; 
+  }
+
+  .button-section button.active {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    background: linear-gradient(90deg, rgb(21, 5, 114) 0%, rgb(21, 43, 167) 100%);
+  }
+  
+  .button-section button:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    background: linear-gradient(90deg, rgb(46, 29, 142) 0%, rgb(44, 71, 221) 100%);
+  }
+
+  
+}
+
