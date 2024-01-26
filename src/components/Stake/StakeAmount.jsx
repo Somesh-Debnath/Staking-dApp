@@ -58,23 +58,23 @@ const StakeAmount = () => {
   };
 
     return (
-      <form onSubmit={stakeToken} className="flex flex-col justify-center items-start pt-9 px-9 pb-4">
-        <div className="flex w-[100%] text-white justify-between">
-        <label className=" opacity-80 text-s font-normal mb-4">Enter ETH amount</label>
+      <form onSubmit={stakeToken} className="flex flex-col justify-center items-start pt-9 px-9 pb-4 font-semibold">
+        <div className="flex w-[100%] text-black justify-between">
+        <label className=" opacity-80 text-s  mb-4">Enter ETH amount</label>
         <label>My ETHx: {ethxBalance}</label>
         </div>
-        <input className="p-6 w-[100%] rounded-xl bg-[#2F2F36] outline-none text-white" type="text" ref={stakeAmountRef} placeholder="0.0"  onChange={handleAmountChange}/>
-        <div className="flex justify-between text-gray-300 w-[100%] mt-5 font-normal">
+        <input className="p-6 w-[100%] rounded-xl border-[1px] border-[#93278F] outline-none text-black" type="text" ref={stakeAmountRef} placeholder="0.0"  onChange={handleAmountChange}/>
+        <div className="flex justify-between text-black w-[100%] mt-5 ">
         <label >You will get:</label>
         <label>{ethAmount} ETHx</label>
        </div>
-       <div className="w-[100%] bg-white border-b mt-5 rounded-xl"></div>
-       <div className="flex justify-between text-gray-300 w-[100%] mt-5 font-extralight">
+       <div className="w-[100%] bg-black border-b mt-5 rounded-xl"></div>
+       <div className="flex justify-between text-black w-[100%] mt-5 ">
           <label>Exchange rate</label>
           <label>1 ETHx = 1.015151 ETH</label>
        </div>
         { 
-       <button onClick={stakeToken} type="submit" className= {`text-gray-200 bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-m px-5 py-5 text-center me-2 mb-2 w-[100%] mt-6 uppercase`}
+       <button onClick={stakeToken} type="submit" className= {`bg-[#93278F] font-medium rounded-lg text-m px-5 py-5 text-center text-white hover:text-black me-2 mb-2 w-[100%] mt-6 uppercase`}
        disabled={isDisabled} >Stake Token</button>
         }
       </form>

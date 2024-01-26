@@ -55,7 +55,7 @@ export const connectWallet = async () => {
 
         chainId = parseInt(chainIdHex,16)
         if(chainId !== 5){
-            alert("Please connect to Goerli Testnet")
+           // switch to goerli testnet if connected to another one
             await switchToGoerli()
         }
             var selectedAccount  = accounts[0]

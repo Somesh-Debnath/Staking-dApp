@@ -51,17 +51,17 @@ const ApproveAmount = () => {
   };
 
     return (
-        <form onSubmit={approveToken} className="flex flex-col justify-center items-start pt-9 px-9 pb-4">
-        <div className="flex w-[100%] text-white justify-between">
-        <label className=" opacity-80 text-s font-normal mb-4">Enter ETHx amount</label>
+        <form onSubmit={approveToken} className="flex flex-col justify-center items-start pt-9 px-9 pb-4 font-semibold">
+        <div className="flex w-[100%] text-black justify-between">
+        <label className=" opacity-80 text-s  mb-4">Enter ETHx amount</label>
         <label>My ETHx: {ethxBalance}</label>
         </div>
-        <input className="p-6 w-[100%] rounded-xl bg-[#2F2F36] outline-none text-white mb-2" type="text" ref={approveStakeAmountRef} placeholder="0.0" />
+        <input className="p-6 w-[100%] rounded-xl border-[1px] border-[#93278F] outline-none text-black" type="text" ref={approveStakeAmountRef} placeholder="0.0" />
 
-       <div className="uppercase text-xs text-gray-200 flex justify-center items-center w-[100%] mt-16">"AFTER APPROVAL ONLY YOU CAN UNSTAKE YOUR TOKEN"</div>
-       <div className="w-[100%] bg-white border-b mt-5 rounded-xl"></div>
+       <div className="uppercase text-xs text-black font-bold flex justify-center items-center w-[100%] mt-16">"AFTER APPROVAL ONLY YOU CAN UNSTAKE YOUR TOKEN"</div>
+       <div className="w-[100%] bg-black border-b mt-5 rounded-xl"></div>
       
-       <button onClick={approveToken} type="submit" className=" text-gray-200 bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-m px-5 py-5 text-center me-2 mb-2 w-[100%] mt-6 uppercase"
+       <button onClick={approveToken} type="submit" className={`bg-[#93278F] font-medium rounded-lg text-m px-5 py-5 text-center text-white hover:text-black me-2 mb-2 w-[100%] mt-6 uppercase`}
        disabled={isDisabled}>Approve Token</button>
       </form>
       )

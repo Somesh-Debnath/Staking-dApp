@@ -6,6 +6,7 @@ import StakeAmount from './components/Stake/StakeAmount'
 import WithdrawAmount from './components/Withdraw/WithdrawAmount'
 import ApproveAmount from './components/Approve/ApproveAmount'
 import ClaimAmount from './components/Claim/ClaimAmount'
+import Homepage from './components/Homepage/Homepage'
 import "../src/App.css"
 import {Toaster} from "react-hot-toast"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -19,7 +20,7 @@ function App() {
 
   return (
       <BrowserRouter>
-      <div className="w-[100%] h-[100vh] bg-[#1C1C22] radial">
+      <div className="w-full h-[100vh] bg-white overflow-hidden">
     <div >
       <Wallet>
         <Navigation/>
@@ -27,27 +28,26 @@ function App() {
             <div className="flex justify-between mt-4 button-section mb-5 "></div>
       <Routes>
           <Route path="/" element={
-          <div className="w-[500px] rounded-xl bg-[#34343D]">
-            <StakeAmount />
-          </div>
+         <Homepage/>
           }></Route>
           <Route path="/stake" element={
-          <div className="w-[500px] rounded-xl bg-[#34343D]">
+            
+          <div className="w-[500px] rounded-xl text-black border-2 border-[#93278F]">
             <StakeAmount />
           </div>
           }></Route>
           <Route path="/approve" element={
-          <div className="w-[500px] rounded-xl bg-[#34343D]">
+          <div className="w-[500px] rounded-xl text-black border-2 border-[#93278F]">
             <ApproveAmount />
           </div>
           }></Route>
           <Route path="/withdraw" element={
-          <div className="w-[500px] rounded-xl bg-[#34343D]">
+          <div className="w-[500px] rounded-xl text-black border-2 border-[#93278F]">
             <WithdrawAmount />
           </div>
           }></Route>
           <Route path="/claim" element={
-          <div className="w-[500px] rounded-xl bg-[#34343D]">
+          <div className="w-[500px] rounded-xl text-black border-2 border-[#93278F]">
             <ClaimAmount />
           </div>
           }></Route>

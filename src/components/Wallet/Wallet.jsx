@@ -44,10 +44,10 @@ const Wallet = ({children}) => {
     <div>
         <Web3Context.Provider value={state}>{children}</Web3Context.Provider>
         {
-            !connected ? <button onClick={handleWallet} type="button" className="fixed top-10 right-6 text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2">
+            !connected ? <button onClick={handleWallet} type="button" className="fixed top-10 right-6 text-[white] bg-[#93278F] rounded-lg hover:text-black px-5 py-2 me-2 mb-2">
                 Connect with MetaMask
             </button> : 
-            <button onClick={handleWallet} type="button" className="fixed top-10 right-6 text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2">
+            <button onClick={handleWallet} type="button" className="fixed top-10 right-6 text-[white] bg-[#93278F] px-5 py-2 rounded-lg hover:text-black me-2 mb-2">
                 {state.selectedAccount.slice(0,6)}...{state.selectedAccount.slice(-4)}
             </button>
         }

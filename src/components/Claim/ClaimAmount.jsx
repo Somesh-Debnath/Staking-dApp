@@ -54,16 +54,16 @@ const ClaimAmount = () => {
     }
   };
     return (
-       <form onSubmit={claimToken} className="flex flex-col justify-center items-start pt-9 px-9 pb-4">
-        <div className="flex w-[100%] text-white justify-between">
-        <label className=" opacity-80 text-s font-normal mb-4">Enter Request ID</label>
+       <form onSubmit={claimToken} className="flex flex-col justify-center items-start pt-9 px-9 pb-4 font-semibold">
+        <div className="flex w-[100%] text-black justify-between">
+        <label className=" opacity-80 text-s mb-4">Enter Request ID</label>
         </div>
-        <input className="p-6 w-[100%] rounded-xl bg-[#2F2F36] outline-none text-white" type="text" ref={claimAmountRef} placeholder="0" />
-        <div className="mt-7 w-[100%] text-center">{requestIds.length >= 1 ? <div><span className="uppercase text-gray-200 font-medium">Request Id :</span>{' '}<span className="text-white font-extralight">{requestIds.split(",").reverse().join(",")}</span></div> : <div className="mt-6"></div>}</div>
-        <div className="uppercase text-xs text-gray-200 flex justify-center items-center w-[100%] mt-5">"Claim only after your request ID is finalized."</div>
-       <div className="w-[100%] bg-white border-b mt-5 rounded-xl"></div>
+        <input className="p-6 w-[100%] rounded-xl border-[1px] border-[#93278F]  text-black" type="text" ref={claimAmountRef} placeholder="0" />
+        <div className="mt-7 w-[100%] text-center">{requestIds.length >= 1 ? <div><span className="uppercase text-black font-medium">Request Id :</span>{' '}<span className="text-black font-extralight">{requestIds.split(",").reverse().join(",")}</span></div> : <div className="mt-6"></div>}</div>
+        <div className="uppercase text-xs text-black flex justify-center font-bold items-center w-[100%] mt-5">"Claim only after your request ID is finalized."</div>
+       <div className="w-[100%] bg-black border-b mt-5 rounded-xl"></div>
       
-       <button onClick={claimToken} type="submit" className=" text-gray-200 bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-m px-5 py-5 text-center me-2 mb-2 w-[100%] mt-6 uppercase"
+       <button onClick={claimToken} type="submit" className={`bg-[#93278F] font-medium rounded-lg text-m px-5 py-5 text-center text-white hover:text-black me-2 mb-2 w-[100%] mt-6 uppercase`}
        disabled={isDisabled}>Claim Token</button>
       </form>
     )
